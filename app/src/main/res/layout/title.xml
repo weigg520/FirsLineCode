@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_weight="10"
+    android:orientation="horizontal"
+    android:background="@color/colorAccent"
+    >
+
+    <Button
+        android:id="@+id/bn_t_back"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="返回"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_t_title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:gravity="center"
+        android:background="@color/colorAccent"
+        android:text="这里是标题"
+        />
+
+    <Button
+        android:id="@+id/bt_t_menu"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="菜单"
+        android:gravity="center"
+        />
+
+</LinearLayout>
