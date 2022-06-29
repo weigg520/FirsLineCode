@@ -1,53 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
-    >
+    tools:context=".ProviderActivity">
 
     <Button
-        android:id="@+id/bt_c3"
+        android:id="@+id/bt_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="第3章"
+        android:text="添加"
         />
 
     <Button
-        android:id="@+id/bt_c4"
+        android:id="@+id/bt_query"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="第4章"
+        android:text="查询"
         />
 
     <Button
-        android:id="@+id/bt_c5"
+        android:id="@+id/bt_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="第5章"
+        android:text="更新"
         />
 
-    <Button
-        android:id="@+id/bt_c6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="第6章"
-        />
 
     <Button
-        android:id="@+id/bt_c7"
+        android:id="@+id/bt_delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="第7章"
-        />
-
-    <Button
-        android:id="@+id/bt_c8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="第8章"
+        android:text="删除"
         />
 
 </LinearLayout>

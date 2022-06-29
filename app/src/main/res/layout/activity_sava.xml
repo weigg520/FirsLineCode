@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".chapter07.SaveActivity">
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="加载数据"
+        />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="保存"
+        />
+
+    <Button
+        android:id="@+id/bt_load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/bt_sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存sp"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/bt_sq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="创建数据库"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/bt_sq_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="增加"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/bt_sq_updata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更新"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/bt_sq_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/bt_sq_queryData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/bt_sq_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="数据库事务"
+        android:layout_gravity="center"
+        />
+
+
+</LinearLayout>

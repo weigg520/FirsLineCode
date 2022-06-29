@@ -1,11 +1,14 @@
 package com.wzz.firstlinecode.chapter04
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.wzz.firstlinecode.R
 import com.wzz.firstlinecode.chapter03.BaseActivity
 import kotlinx.android.synthetic.main.activity_ui.*
@@ -19,7 +22,7 @@ import kotlinx.android.synthetic.main.activity_ui.*
  */
 class UIActivity :BaseActivity(), View.OnClickListener{
     private lateinit var alertDialog:AlertDialog.Builder
-    private val fruits = listOf("banana","durian","kiwi_fruit","lemon","pears","watermelon")
+    private val fruits = listOf("香蕉","榴莲","猕猴桃","柠檬","梨子","西瓜")
 
     @SuppressLint("ShowToast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +36,10 @@ class UIActivity :BaseActivity(), View.OnClickListener{
         changeImageView()
         changeProgressBar()
         alertDialog()
+        initFruitsData()
+        listViewTest()
+        rvTest()
+        startChat()
     }
 
     private fun changeTvColorAndSize(){
@@ -97,8 +104,42 @@ class UIActivity :BaseActivity(), View.OnClickListener{
         }
     }
 
+    private val fruitListData = ArrayList<Fruit>()
+
     fun listViewTest(){
         val adapter = ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,fruits)
-        ui_lv.adapter = adapter
+        val fruitAdapter = FruitAdapter(this,R.layout.item_fruits,fruitListData)
+        ui_lv.adapter = fruitAdapter
+        ui_lv.setOnItemClickListener { _, _, position, _ ->
+            val fruit:Fruit = fruitListData[position]
+            ToastUtils.showToast(fruit.name)
+        }
+    }
+
+    fun rvTest(){
+        val fruitAdapter = RVFruitAdapter(fruitListData)
+        ui_rv.layoutManager = GridLayoutManager(this,3).apply {
+            orientation = LinearLayoutManager.VERTICAL
+        }
+        ui_rv.adapter = fruitAdapter
+    }
+
+    private fun initFruitsData(){
+        repeat(3){
+            fruitListData.add(Fruit("香蕉",R.drawable.banana))
+            fruitListData.add(Fruit("猕猴桃",R.drawable.kiwi_fruit))
+            fruitListData.add(Fruit("榴莲",R.drawable.durian))
+            fruitListData.add(Fruit("柠檬",R.drawable.lemon))
+            fruitListData.add(Fruit("芒果",R.drawable.mango))
+            fruitListData.add(Fruit("西瓜",R.drawable.watermelon))
+            fruitListData.add(Fruit("梨子",R.drawable.pears))
+        }
+    }
+
+
+    private fun startChat(){
+        start_chat.setOnClickListener {
+            startActivity(Intent(this,ChatActivity::class.java))
+        }
     }
 }

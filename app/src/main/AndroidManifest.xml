@@ -2,9 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.wzz.firstlinecode"
+    android:sharedUserId="android.uid.system"
     >
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--android:sharedUserId="android.uid.system"-->
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".FirstApplication"
@@ -14,25 +18,53 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.wzz.firstlinecode.chapter03.FirstActivity">
-
-        </activity>
+        <activity android:name=".chapter08.ContentProviderActivity"/>
+        <activity android:name=".chapter07.SaveActivity" />
+        <activity android:name=".chapter06.BroadcastReceiverActivity" />
+        <activity android:name=".chapter05.FragmentActivity" />
+        <activity android:name=".chapter04.ChatActivity" />
+        <activity android:name=".chapter03.FirstActivity" />
         <activity android:name=".chapter03.SecondActivity">
             <intent-filter tools:ignore="AppLinkUrlError">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="https"/>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity android:name="com.wzz.firstlinecode.MainActivity"
-            >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".chapter04.UIActivity" />
 
-        <activity android:name=".chapter04.UIActivity"/>
+        <receiver
+            android:name=".chapter06.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".chapter06.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_BROADCAST_RECEIVER" />
+            </intent-filter>
+        </receiver>
+        
+        <provider
+            android:name=".chapter08.DatabaseProvider"
+            android:authorities="com.wzz.firstlinecode.provider"
+            android:enabled="true"
+            android:exported="true"
+            />
     </application>
 
 </manifest>

@@ -1,2 +1,3 @@
+include ':firsttestdemo'
 include ':app'
 rootProject.name = "FirsLineCode"

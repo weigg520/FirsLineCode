@@ -47,4 +47,16 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ui_rv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <Button
+        android:id="@+id/start_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动聊天"
+        />
+
 </LinearLayout>
