@@ -6,6 +6,7 @@ import android.content.ContentValues
 import android.content.UriMatcher
 import android.net.Uri
 import com.wzz.firstlinecode.chapter07.MyDatabaseHelper
+import com.wzz.firstlinecode.chapter08.kotlin.later
 
 /**
  * @ClassName DatabaseProvider
@@ -23,13 +24,13 @@ class DatabaseProvider :ContentProvider() {
     private val authority = "com.wzz.firstlinecode.provider"
     private var dbHelper:MyDatabaseHelper? =null
 
-    private val uriMatcher by lazy{
-        val matcher = UriMatcher(UriMatcher.NO_MATCH)
-        matcher.addURI(authority,"book",bookDir)
-        matcher.addURI(authority,"book/#",bookItem)
-        matcher.addURI(authority,"category",categoryDir)
-        matcher.addURI(authority,"category/#",categoryItem)
-        matcher
+    private val uriMatcher by later{
+        UriMatcher(UriMatcher.NO_MATCH).apply {
+            addURI(authority,"book",bookDir)
+            addURI(authority,"book/#",bookItem)
+            addURI(authority,"category",categoryDir)
+            addURI(authority,"category/#",categoryItem)
+        }
     }
 
     override fun onCreate() = context?.let {

@@ -5,10 +5,10 @@
     android:sharedUserId="android.uid.system"
     >
 
-    <!--android:sharedUserId="android.uid.system"-->
-
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- android:sharedUserId="android.uid.system" -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
     <application
         android:name=".FirstApplication"
@@ -18,7 +18,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".chapter08.ContentProviderActivity"/>
+        <service
+            android:name=".chapter10.MyService"
+            android:enabled="true"
+            android:exported="true"/>
+        <service android:name=".chapter10.MyIntentService"
+            android:enabled="true"
+            android:exported="true"
+            />
+
+        <activity android:name=".chapter10.ServiceActivity" />
+        <activity android:name=".chapter09.MultimediaActivity" />
+        <activity android:name=".chapter08.ContentProviderActivity" />
         <activity android:name=".chapter07.SaveActivity" />
         <activity android:name=".chapter06.BroadcastReceiverActivity" />
         <activity android:name=".chapter05.FragmentActivity" />
@@ -33,7 +44,9 @@
                 <data android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -58,13 +71,21 @@
                 <action android:name="android.intent.action.MY_BROADCAST_RECEIVER" />
             </intent-filter>
         </receiver>
-        
+
         <provider
             android:name=".chapter08.DatabaseProvider"
             android:authorities="com.wzz.firstlinecode.provider"
             android:enabled="true"
-            android:exported="true"
-            />
+            android:exported="true" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.cameraalbumtest.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

@@ -11,18 +11,26 @@ import android.widget.Toast
  * @Date 2022/6/14 16:48
  * @Version 1.0
  */
+@SuppressLint("StaticFieldLeak")
 object ToastUtils {
-    private lateinit var toast: Toast
+
+    private var context:Context? = null
+
+    private val toast by lazy {
+        context?.let {
+            Toast.makeText(it,"",Toast.LENGTH_SHORT)
+        }
+    }
 
     @SuppressLint("ShowToast")
     fun initToastUtils(context: Context){
-        toast =  Toast.makeText(context,"",Toast.LENGTH_SHORT)
+        this.context = context
     }
 
     fun showToast(content:String){
-        toast.apply {
-            setText(content)
-            show()
+        toast?.let {
+            it.setText(content)
+            it.show()
         }
     }
 
