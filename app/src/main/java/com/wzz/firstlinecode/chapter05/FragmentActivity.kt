@@ -1,12 +1,13 @@
 package com.wzz.firstlinecode.chapter05
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.wzz.firstlinecode.R
 import com.wzz.firstlinecode.chapter03.BaseActivity
 import kotlinx.android.synthetic.main.right_fragment.*
 
-class FragmentActivity : BaseActivity() {
+class FragmentActivity : AppCompatActivity() {
 
     val anotherRightFragment:AnotherRightFragment = AnotherRightFragment()
 

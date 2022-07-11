@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/banana"
+        android:icon="@drawable/banana"
+        android:title="香蕉"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/pears"
+        android:icon="@drawable/pears"
+        android:title="梨子"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/lemon"
+        android:icon="@drawable/lemon"
+        android:title="柠檬"
+        app:showAsAction="never"
+        />
+
+</menu>

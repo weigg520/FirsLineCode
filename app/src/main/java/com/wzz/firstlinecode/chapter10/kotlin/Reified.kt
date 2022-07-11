@@ -17,6 +17,12 @@ inline fun <reified T> launchActivity(context: Context,block:Intent.() -> Unit){
     intent.block()
     context.startActivity(intent)
 }
+
+inline fun <reified T> launchActivity(context: Context){
+    val intent = Intent(context,T::class.java)
+    context.startActivity(intent)
+}
+
 inline fun <reified T> launchService(context: Context){
     val intent = Intent(context,T::class.java)
     context.startService(intent)

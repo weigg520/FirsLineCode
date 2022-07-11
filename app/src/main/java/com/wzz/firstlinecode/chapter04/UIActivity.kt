@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,7 +21,7 @@ import kotlinx.android.synthetic.main.activity_ui.*
  * @Date 2022/6/14 14:32
  * @Version 1.0
  */
-class UIActivity :BaseActivity(), View.OnClickListener{
+class UIActivity : AppCompatActivity(), View.OnClickListener{
     private lateinit var alertDialog:AlertDialog.Builder
     private val fruits = listOf("香蕉","榴莲","猕猴桃","柠檬","梨子","西瓜")
 

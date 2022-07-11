@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/banana"
+            android:icon="@drawable/banana"
+            android:title="香蕉" />
+        <item
+            android:id="@+id/durian"
+            android:icon="@drawable/durian"
+            android:title="榴莲" />
+        <item
+            android:id="@+id/lemon"
+            android:icon="@drawable/lemon"
+            android:title="lemon" />
+        <item
+            android:id="@+id/pears"
+            android:icon="@drawable/pears"
+            android:title="梨子" />
+        <item
+            android:id="@+id/watermelon"
+            android:icon="@drawable/watermelon"
+            android:title="西瓜" />
+    </group>
+</menu>

@@ -2,13 +2,13 @@ package com.wzz.firstlinecode.chapter04
 
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.wzz.firstlinecode.R
-import com.wzz.firstlinecode.chapter03.BaseActivity
 import kotlinx.android.synthetic.main.activity_chat.*
 import kotlin.collections.ArrayList
 
-class ChatActivity : BaseActivity(),View.OnClickListener{
+class ChatActivity : AppCompatActivity(),View.OnClickListener{
 
     private val msgList:MutableList<Msg> = ArrayList()
     private lateinit var msgAdapter:MsgAdapter

@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.second.*
  * @Date 2022/6/13 15:34
  * @Version 1.0
  */
-class SecondActivity:BaseActivity() {
+class SecondActivity:AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

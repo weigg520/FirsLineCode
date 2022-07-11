@@ -13,6 +13,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.FileProvider
 import com.wzz.firstlinecode.MainActivity
 import com.wzz.firstlinecode.R
+import com.wzz.firstlinecode.chapter03.BaseActivity
 import kotlinx.android.synthetic.main.activity_multimedia.*
 import java.io.File
 

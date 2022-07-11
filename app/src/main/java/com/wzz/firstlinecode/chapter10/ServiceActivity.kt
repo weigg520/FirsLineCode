@@ -10,6 +10,7 @@ import android.os.*
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.wzz.firstlinecode.R
+import com.wzz.firstlinecode.chapter03.BaseActivity
 import com.wzz.firstlinecode.chapter10.kotlin.launchService
 import kotlinx.android.synthetic.main.activity_service.*
 import kotlin.concurrent.thread

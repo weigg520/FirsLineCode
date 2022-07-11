@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import com.wzz.firstlinecode.R
 import com.wzz.firstlinecode.chapter03.BaseActivity
@@ -16,7 +17,7 @@ import java.io.InputStreamReader
 import java.io.OutputStreamWriter
 import java.lang.NullPointerException
 
-class SaveActivity : BaseActivity() {
+class SaveActivity : AppCompatActivity() {
     private lateinit var dpHelper:MyDatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {

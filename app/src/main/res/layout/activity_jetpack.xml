@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".chapter13.JetPackActivity">
+
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="80sp"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/plus_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="plus one"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="clear"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

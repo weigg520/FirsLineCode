@@ -62,5 +62,24 @@
         android:layout_height="wrap_content"
         android:text="第10章"
         />
+    <Button
+        android:id="@+id/bt_c11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="第11章"
+        />
+    <Button
+        android:id="@+id/bt_c12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="第12章"
+        />
+
+    <Button
+        android:id="@+id/bt_c13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="第13章"
+        />
 
 </LinearLayout>

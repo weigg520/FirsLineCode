@@ -28,7 +28,6 @@ class FirstActivity :BaseActivity(){
     @SuppressLint("ShowToast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_first)
         first_bt.setOnClickListener {
             Toast.makeText(this,"点击了",Toast.LENGTH_SHORT).show()
             //显示
@@ -41,6 +40,8 @@ class FirstActivity :BaseActivity(){
             finish()
         }
     }
+
+    override fun getContentViewId(): Int = R.layout.activity_first
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main,menu)
@@ -58,6 +59,10 @@ class FirstActivity :BaseActivity(){
         }
         return true
     }
+
+    override fun initView() {
+    }
+
     override fun onBackPressed() {
         /*if (!web_view.canGoBack()){
             super.onBackPressed()

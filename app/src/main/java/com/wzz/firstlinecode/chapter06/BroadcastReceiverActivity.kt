@@ -7,6 +7,7 @@ import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.wzz.firstlinecode.R
+import com.wzz.firstlinecode.chapter03.BaseActivity
 import com.wzz.firstlinecode.chapter04.ToastUtils
 import kotlinx.android.synthetic.main.activity_broadcat_receiver.*
 

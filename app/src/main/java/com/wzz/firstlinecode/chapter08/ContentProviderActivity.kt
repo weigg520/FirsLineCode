@@ -6,13 +6,14 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.ContactsContract
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.contentValuesOf
 import com.wzz.firstlinecode.R
 import com.wzz.firstlinecode.chapter03.BaseActivity
 import kotlinx.android.synthetic.main.activity_content_provider.*
 import java.lang.Exception
 
-class ContentProviderActivity : BaseActivity() {
+class ContentProviderActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

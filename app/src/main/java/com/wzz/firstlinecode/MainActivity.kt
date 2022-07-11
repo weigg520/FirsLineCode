@@ -1,6 +1,5 @@
 package com.wzz.firstlinecode
 import android.content.Intent
-import android.os.Bundle
 import android.view.View
 import com.wzz.firstlinecode.chapter03.BaseActivity
 import com.wzz.firstlinecode.chapter03.FirstActivity
@@ -13,13 +12,21 @@ import com.wzz.firstlinecode.chapter08.ContentProviderActivity
 import com.wzz.firstlinecode.chapter09.MultimediaActivity
 import com.wzz.firstlinecode.chapter10.ServiceActivity
 import com.wzz.firstlinecode.chapter10.kotlin.launchActivity
+import com.wzz.firstlinecode.chapter11.NetworkActivity
+import com.wzz.firstlinecode.chapter12.MaterialTestActivity
+import com.wzz.firstlinecode.chapter13.JetPackActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() , View.OnClickListener{
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    override fun getContentViewId(): Int = R.layout.activity_main
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        judgeNotification(intent)
+    }
+
+    override fun initView() {
         judgeNotification(intent)
         bt_c3.setOnClickListener(this)
         bt_c4.setOnClickListener(this)
@@ -29,11 +36,9 @@ class MainActivity : BaseActivity() , View.OnClickListener{
         bt_c8.setOnClickListener(this)
         bt_c9.setOnClickListener(this)
         bt_c10.setOnClickListener(this)
-    }
-
-    override fun onNewIntent(intent: Intent?) {
-        super.onNewIntent(intent)
-        judgeNotification(intent)
+        bt_c11.setOnClickListener(this)
+        bt_c12.setOnClickListener(this)
+        bt_c13.setOnClickListener(this)
     }
 
     /**
@@ -81,6 +86,15 @@ class MainActivity : BaseActivity() , View.OnClickListener{
                 launchActivity<ServiceActivity>(this){
 
                 }
+            }
+            R.id.bt_c11->{
+                launchActivity<NetworkActivity>(this)
+            }
+            R.id.bt_c12->{
+                launchActivity<MaterialTestActivity>(this)
+            }
+            R.id.bt_c13->{
+                launchActivity<JetPackActivity>(this)
             }
         }
     }
