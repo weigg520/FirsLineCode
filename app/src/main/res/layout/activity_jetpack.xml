@@ -15,6 +15,22 @@
         android:layout_gravity="center"
         />
 
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="80sp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="80sp"
+        android:layout_gravity="center"
+        />
+
     <Button
         android:id="@+id/plus_one"
         android:layout_width="match_parent"
@@ -27,6 +43,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="clear"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="增"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="改"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查"
         tools:ignore="HardcodedText" />
 
 </LinearLayout>

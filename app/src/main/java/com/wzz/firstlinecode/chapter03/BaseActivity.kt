@@ -1,17 +1,16 @@
 package com.wzz.firstlinecode.chapter03
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
-import com.google.android.material.snackbar.Snackbar
 import com.wzz.firstlinecode.BaseViewInit
 import com.wzz.firstlinecode.R
 import com.wzz.firstlinecode.chapter04.ToastUtils
 import com.wzz.firstlinecode.chapter12.kotlin.showSnackBar
+import com.wzz.firstlinecode.chapter13.JetPackObserver
 import kotlinx.android.synthetic.main.toolbar_base.*
 
 /**
